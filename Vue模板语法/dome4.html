@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 使用JavaScript表达式</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome1" v-bind:class='attr'>
+        Message:{{message + '    这里是后来添加'}},
+        {{1*10}},
+        {{new Date()}}
+        {{ok ? 'YES' : 'NO'}}
+        {{message.split('').reverse().join('')}}
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue ({
+            el: '#dome1',
+            data: {
+                attr: 'title',
+                message: '这里是测试'
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome1" v-on:click='clickHandle' v-once>
+        Message:{{message}}
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue ({
+            el: '#dome1',
+            data: {
+                message: '这里是演示'
+            },
+            methods: {
+                clickHandle: function() {
+                    this.message = '这里发生了修改'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插入属性</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome1" v-bind:class='attr'>
+        Message:{{message}}
+    </div>
+    <input type="checkbox" id='check' v-bind:checked="onOff">
+    <script type="text/javascript">
+        var vm = new Vue ({
+            el: '#check',
+            data: {
+                onOff: false
+            }
+        })
+        var vm = new Vue ({
+            el: '#dome1',
+            data: {
+                attr: 'title'
+            }
+        })
+    </script>
+</body>
+</html>

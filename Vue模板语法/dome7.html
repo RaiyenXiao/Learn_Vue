@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .redBox {
+            width: 100px;
+            height: 200px;
+            background: red;
+        }
+        .blueBox {
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+    </style>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome7" :class="style" @click="clickHandle">
+        {{message}}
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue ({
+            el: '#dome7',
+            data: {
+                style: 'redBox',
+                message: '缩写'
+            },
+            methods: {
+                clickHandle (){
+                    this.style = 'blueBox'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome6" v-if = "onOff" v-on:click.prevent="clickHandle">
+        {{message}}
+    </div>
+    <script>
+        var vm = new Vue ({
+            el: '#dome6',
+            data: {
+                message: '这里是测试v-if',
+                onOff: true
+            },
+            methods: {
+                clickHandle (){
+                    this.onOff = false
+                }
+            }
+        })
+    </script>
+</body>
+</html>
