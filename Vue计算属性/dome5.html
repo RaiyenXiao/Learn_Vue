@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome4">
+        <p>{{firstName}}</p>
+        <p>{{lastName}}</p>
+        <p>{{fullName}}</p>
+    </div>
+    <script>
+        var vm = new Vue ({
+            el: '#dome4',
+            data: {
+                firstName: 'woHaHa',
+                lastName: 'FF'
+            },
+            computed: {
+                fullName: {
+                    get(){
+                        return this.firstName + ' ' + this.lastName
+                    },
+                    set: function(val) {
+                        this.firstName = val.split(' ')[0];
+                        this.lastName = val.split(' ')[1] ?
+                            val.split(' ')[1]:' ';
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

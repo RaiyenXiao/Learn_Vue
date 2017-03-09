@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome1">
+        {{message.split('').sort(function(a,b){return a-b}).join('')}}
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue ({
+            el: '#dome1',
+            data: {
+                message: 'this is a apple'
+            }
+        })
+    </script>
+</body>
+</html>

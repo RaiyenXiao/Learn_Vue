@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="dome1"></div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#dome1',
+            data: {
+                'a': '1'
+            }
+        });
+        console.log(vm.$el); //  <div id="dome1"></div>
+        console.log(vm.el); // undefined
+        console.log(vm.a == vm.$data.a);
+        vm.$watch('a', function(nowValue,  oldValue){
+            // 这个函数会在data的a进行修改的时候才会触发
+        })
+    </script>
+</body>
+</html>

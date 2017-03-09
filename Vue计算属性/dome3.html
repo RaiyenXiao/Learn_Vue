@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome3">
+        <p>{{message}}</p>
+        <p>{{reverseMessage()}}</p>
+    </div>
+    <script>
+        var vm = new Vue ({
+            el: '#dome3',
+            data: {
+                message: 'find you'
+            },
+            methods: {
+                reverseMessage (){
+                    return this.message.split('').reverse().join('');
+                }
+            }
+        })
+    </script>
+</body>
+</html>
