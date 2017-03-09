@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>绑定插入的文本内容</title>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id="app">
+		{{message}}
+	</div>
+	<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue'
+        }
+    })
+</script>
+</body>
+</html>

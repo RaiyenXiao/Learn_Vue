@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title> 处理用户输入</title>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div id="app-5">
+    <p>{{message}}</p>
+    <button v-on:click = 'handleClick'>{{message}}</button>
+</div>
+<script type="text/javascript">
+	var app5 = new Vue({
+		el:'#app-5',
+		data:{
+			message:'abcdefghijklmnopqrstuvwxyz'
+		},
+		methods:{
+			handleClick:function(){
+				 this.message = this.message.split('').reverse().join('')
+			}
+		}
+	})
+	//在 handleClick 方法中，我们在没有接触 DOM 的情况下更新了应用的状态 - 所有的 DOM 操作都由 Vue 来处理，你写的代码只需要关注基本逻辑。
+</script>
+</body>
+</html>
