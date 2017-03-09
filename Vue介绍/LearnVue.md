@@ -8,7 +8,7 @@ Vue 是一种渐进式MVVM框架，其核心在于相应的数据绑定和组合
 在el 下的节点都会被检测，遇到`{{}}` 或者是指令的时候进行解析；
 
 1） 绑定插入的文本内容
-[DOME1](./html/dome1.html)
+[DOME1](./dome1.html)
 采用简洁模板语法来声明式的将数据渲染进去
 ```
 <div id="app">
@@ -27,7 +27,7 @@ Vue 是一种渐进式MVVM框架，其核心在于相应的数据绑定和组合
 经过这样的声明，数据message 就和 DOM 绑定到一起了，通过在控制台修改 app.message ，浏览器就会重新渲染数据；
 
 2） 绑定DOM 元素的元素属性
-[DOME2](./html/dome2.html)
+[DOME2](./dome2.html)
 通过指令 `v-bind` 来实现，这种绑定也是动态的
 `v-bind:attrName='key'`
 
@@ -52,7 +52,7 @@ Vue 是一种渐进式MVVM框架，其核心在于相应的数据绑定和组合
 1. 通过 `v-if` 来实现条件：
 `v-if = 'key'`
 
-[DOME3](./html/dome3.html)
+[DOME3](./dome3.html)
 
 ```
 <div id="app-3" v-bind:title='attr' v-if = 'onOff'>
@@ -75,7 +75,7 @@ Vue 是一种渐进式MVVM框架，其核心在于相应的数据绑定和组合
 2. 通过 `v-for` 指令，实现绑定数据到数组来渲染 一个列表
 `v-for = 'val in key'`
 从数据的key中循环，循环的每一项赋值于val
-[DOME4](./html/dome4.html)
+[DOME4](./dome4.html)
 
 ```
 <div id="app-4" v-bind:title='val' v-if='onOff'>
@@ -108,7 +108,7 @@ Vue 是一种渐进式MVVM框架，其核心在于相应的数据绑定和组合
 通过 `v-on` 指令绑定一个监听事件，调用我们vue中实例的方法(方法存放在 vue 对象的methods下)；
 `v-on:eventName=key`
 
-[DOME5](./html/dome5.html)
+[DOME5](./dome5.html)
 
 ```
 <div id="app-5">
@@ -133,7 +133,7 @@ Vue 是一种渐进式MVVM框架，其核心在于相应的数据绑定和组合
 
 5) 表单的双向数据绑定：
 
-[DOME6](./html/dome6.html)
+[DOME6](.//dome6.html)
 使用`v-model` 指令，可以将表单输入和数据进行双向数据绑定
 
 ```
