@@ -262,7 +262,6 @@ Vue 是一种渐进式MVVM框架，其核心在于相应的数据绑定和组合
 而在props的数组中，应该和插值保持一致，写成驼峰式的（如btnTest）
 props: ['btnTest'],  
 template: "<button>btn：{{btnTest}}</button>", 
-
 <add btn-test="h"></add>
 
 http://blog.csdn.net/sinat_17775997/article/details/52437962
