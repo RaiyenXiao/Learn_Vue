@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='../vue.js'></script>
+</head>
+<body>
+    <ul id="numList">
+        <li v-for="re in even(num)">{{re}}</li>
+    </ul>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: "#numList",
+            data: {
+                num: [1,2,3,4,5,6]
+            },
+            methods: {
+                even (num){
+                    return num.filter (function(item){
+                        return item & 1 //返回奇数
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>

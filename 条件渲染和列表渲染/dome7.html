@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='../vue.js'></script>
+</head>
+<body>
+    <div id="dome7">
+        <example v-for="item in message" :data='item.d'>
+        </example>
+    </div>
+    <script type="text/javascript">
+        Vue.component('example', {
+            props:['data'],
+            template: '<div>{{data}}</div>'
+        })
+        var vm = new Vue({
+            el: '#dome7',
+            data: {
+                message: [
+                    {d:'这里是for与template'},
+                    // '这里是第二句'
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

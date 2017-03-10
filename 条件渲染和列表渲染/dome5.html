@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='../vue.js'></script>
+</head>
+<body>
+    <div id="dome5" :style="styleObj" v-show='onOff' @mouseover='handleMouse'></div>
+    <script type="text/javascript">
+        var vm = new Vue ({
+            el: '#dome5',
+            data: {
+                onOff: true,
+                styleObj: {
+                    width: '400px',
+                    height: '400px',
+                    background: 'red'
+                }
+            },
+            methods: {
+                handleMouse(){
+                    this.onOff = false
+                }
+            }
+        })
+    </script>
+</body>
+</html>

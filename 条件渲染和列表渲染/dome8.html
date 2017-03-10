@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='../vue.js'></script>
+</head>
+<body>
+    <div id="dome8">
+        <div  v-for="(item, key, index) in obj">{{item}}-{{key}}-{{index}}</div>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#dome8',
+            data: {
+                obj: {
+                    name: 'ff',
+                    age: '24'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

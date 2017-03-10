@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='../vue.js'></script>
+</head>
+<body>
+    <div id="dome2">
+        <template v-if="loginType === 'username'">
+            <label>Username</label>
+                <input placeholder="Enter your username">
+        </template>
+        <template v-else>
+            <label>Email</label>
+            <input placeholder="Enter your email address">
+        </template>
+        <input type="button" value="changeType" @click='handleClick'>
+    </div>
+    <script type="text/javascript">
+        Vue.component('templata',{
+            templata: '<div></div>'
+        })
+        var vm = new Vue ({
+            el: '#dome2',
+            data: {
+                loginType: 'username'
+            },
+            methods: {
+                handleClick(){
+                    this.loginType = this.loginType=='username'? 'eamil':'username'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='../vue.js'></script>
+</head>
+<body>
+    <div id="dome1" v-else='onOff'>
+        {{message}}
+    </div>
+    <script type="text/javascript">
+        var vue = new Vue({
+            el: '#dome1',
+            data: {
+                message: 'Hello Everybody',
+                onOff: false
+            }
+        })
+    </script>
+</body>
+</html>

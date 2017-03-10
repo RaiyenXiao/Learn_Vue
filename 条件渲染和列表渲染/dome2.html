@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='../vue.js'></script>
+</head>
+<body>
+    <div id="dome2">
+        <example :m='message'></example>
+    </div>
+    <script type="text/javascript">
+        Vue.component('example', {
+            props: ['m'],
+            template: `<div v-if="Math.random()>0.8">
+                            大于0.8
+                        </div>
+                        <div v-else-if="Math.random()>0.6">
+                            大于0.6
+                        </div>
+                        <div v-else>
+                            一个随机数
+                        </div>
+                        `
+        })
+        var vm = new Vue({
+            el: '#dome2',
+            data: {
+                message: 'hello'
+            }
+        })
+    </script>
+</body>
+</html>

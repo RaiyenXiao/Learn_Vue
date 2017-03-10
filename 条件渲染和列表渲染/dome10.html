@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='../vue.js'></script>
+</head>
+<body>
+    <div id="to-do-list">
+        <input type="text" v-model="newList" @keyup.enter='add' placeholder="add a item">
+        <ul>
+            <li
+                is='todoItem'
+                :title="item"
+                v-for="(item, index) in list"
+                v-on:remove="list.splice(index, 1)"
+            ></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        Vue.component('todoItem', {
+            props: ['title'],
+            template: `
+                <li>
+                    {{title}}
+                    <button v-on:click="$emit('remove')">remove</button>\
+                </li>
+            `
+        })
+        var vm = new Vue ({
+            el: '#to-do-list',
+            data: {
+                newList:'',
+                list: [1,2,3,4]
+            },
+            methods: {
+                add(){
+                    this.list.push(this.newList);
+                    this.newList=''
+                }
+            }
+        })
+    </script>
+</body>
+</html>

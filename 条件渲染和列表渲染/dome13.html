@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='../vue.js'></script>
+</head>
+<body>
+    <ul id="dome4">
+        <template v-for="(item, key, index) in items">
+            <li>{{name}}-{{index}}-{{key}}-{{item}}</li>
+        </template>
+    </ul>
+    <script type="text/javascript">
+        var vm = new Vue ({
+            el: '#dome4',
+            data: {
+                name: 'infor',
+                items: {
+                    name: 'ff',
+                    age: 24,
+                    job: 'student'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

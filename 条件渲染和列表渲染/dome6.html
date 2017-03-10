@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='../vue.js'></script>
+</head>
+<body>
+    <div id="dome6">
+        <p  v-for="(item, index) in arr">{{item.infor}}-{{index}}</p>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: "#dome6",
+            data: {
+                arr:[
+                    {infor: 'name:ff'},
+                    {infor: 'age:24'},
+                    {infor: 'job:student'}
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
