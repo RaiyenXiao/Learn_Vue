@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #example {
+            width: 100px;
+            height: 200px;
+        }
+        .blue {
+            background: blue;
+        }
+        .yellow {
+            background: yellow;
+        }
+    </style>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="example" :class='classObj' @click='handleClick'></div>
+    <script type="text/javascript">
+        var vm = new Vue ({
+            el: '#example',
+            data: {
+                onOff: false
+            },
+            computed: {
+                classObj (){
+                    return {
+                        yellow: this.onOff,
+                        blue: !this.onOff
+                    }
+                }
+            },
+            methods: {
+                handleClick (){
+                    this.onOff = !this.onOff
+                }
+            }
+        })
+    </script>
+</body>
+</html>

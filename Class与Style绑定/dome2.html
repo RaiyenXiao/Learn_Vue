@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #example {
+            width: 100px;
+            height: 200px;
+        }
+        .blue {
+            width: 100px;
+            height: 200px;
+            background: blue;
+        }
+        .yellow {
+            width: 100px;
+            height: 200px;
+            background: yellow;
+        }
+        .big {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="example">
+        <my-component :class='{yellow:onOff}' v-bind:m='message'></my-component>
+    </div>
+
+    <script type="text/javascript">
+        Vue.component('my-component', {
+            props: ['m'],
+            template: '<p class = "big">这里是：{{m}}</p>'
+        })
+        var vm = new Vue({
+            el: example,
+            data: {
+                onOff: true,
+                message: '这里是一段话'
+            }
+        })
+    </script>
+</body>
+</html>

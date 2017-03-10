@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #example {
+            width: 100px;
+            height: 200px;
+        }
+        .blue {
+            width: 100px;
+            height: 200px;
+            background: blue;
+        }
+        .yellow {
+            width: 100px;
+            height: 200px;
+            background: yellow;
+        }
+        .big {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome3" :style='styleObj'>
+        {{message}}
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#dome3',
+            data: {
+                message:'style',
+                styleObj: {
+                    height: 500 +'px',
+                    background: 'blue'
+                }
+            }
+        })
+    </script>
+</body>
+</html>
