@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome">
+        <button @click='counter++'>点击</button>
+        <p>这个按钮被点击了{{counter}}</p>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#dome',
+            data: {
+                counter: 0
+            }
+        })
+    </script>
+</body>
+</html>
