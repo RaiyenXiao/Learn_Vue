@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <select class="" name="" v-model="selected">
+            <option v-for='val in option' v-bind:value="val.value">
+                {{val.text}}
+            </option>
+        </select>
+        <p>{{selected}}</p>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#wrap',
+            data: {
+                selected: 'name',
+                option: [
+                    {text:'ff', value:'name'},
+                    {text:'24', value:'age'},
+                    {text:'student', value:'job'}
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

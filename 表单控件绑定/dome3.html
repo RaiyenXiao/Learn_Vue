@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <input type="checkbox" v-model='checked' name="" id="checkbox">
+        <label for="checkbox">{{checked}}</label>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el:'#wrap',
+            data: {
+                checked: true
+            }
+        })
+    </script>
+</body>
+</html>

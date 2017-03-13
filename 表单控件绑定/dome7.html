@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <select v-model='op' multiple>
+            <option value="name">ff</option>
+            <option value="age">24</option>
+            <option value="job">student</option>
+        </select>
+        <p>{{op}}</p>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el:'#wrap',
+            data: {
+                op:[]
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <input type="number" name="" v-model.number='age' id="" @input='handleInput'>
+    </div>
+    <script type="text/javascript">
+        var el = wrap.getElementsByTagName('input')[0];
+        var vm = new Vue({
+            el:"#wrap",
+            data: {
+                age: '22'
+            },
+            methods: {
+                handleInput: function (){
+                    console.log(typeof el.value); // string
+                }
+            }
+        });
+        console.log(typeof vm.age); // string
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <input type="text" name="" id="" placeholder="edit" v-model.lazy="message">
+        <p>{{message}}</p>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#wrap',
+            data: {
+                message: ''
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <input
+            type="checkbox"
+            v-model='toggle'
+            v-bind:true-value='a'
+            v-bind:false-value='b'
+            >
+        <p>{{toggle}}</p>
+    </div>
+    <script type="text/javascript">
+        var vm =　new Vue({
+            el:"#wrap",
+            data: {
+                toggle: '选择',
+                a: 'name:ff',
+                b: 'name:xl'
+            }
+        })
+    </script>
+</body>
+</html>
