@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <my-com></my-com>
+    </div>
+    <script type="text/javascript">
+        Vue.component('my-component', {
+            template:'<em>这里是</em>'
+        })
+        Vue.component('my-com', {
+            
+            template:'<p name="my-component">zh</p>'
+        })
+        var vm = new Vue({
+            el:"#wrap"
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <table id="dome3">
+        <my-component></my-component>
+    </table>
+    <script type="text/javascript">
+        Vue.component("my-component", {
+            template: '<tr>这里是dome3</tr>'
+        })
+        var vm = new Vue({
+            el: '#dome3',
+            data: {
+                message: 'dome3'
+            }
+        })
+    </script>
+</body>
+</html>

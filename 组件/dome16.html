@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome15">
+        <app-layout>
+            <h1 slot='head'>这里使用的slot</h1>
+            {{message}}
+        </app-layout>
+    </div>
+    <script type="text/javascript">
+        Vue.component('app-layout', {
+            template: '\
+                <div>\
+                    <slot name="head"></slot>\
+                    <em>\
+                        <slot></slot>\
+                    </em>\
+                </div>\
+                '
+        });
+        var vm = new Vue({
+            el: "#dome15",
+            data: {
+                message: 'new year'
+            }
+        })
+    </script>
+</body>
+</html>

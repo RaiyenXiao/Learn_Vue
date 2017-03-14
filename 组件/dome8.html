@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome8">
+        <input type="text" v-model='message'>
+        <child v-bind:prop='message'></child>
+    </div>
+    <script type="text/javascript">
+        Vue.component('child', {
+            props:['prop'],
+            template: '<span>{{prop}}</span>'
+        })
+        var vm = new Vue ({
+            el: "#dome8",
+            data: {
+                message: ''
+            }
+        })
+    </script>
+</body>
+</html>

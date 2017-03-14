@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome13">
+        <my-component :me1='message'>
+            {{message}} <!-- 不能被渲染 -->
+        </my-component>
+    </div>
+    <script type="text/javascript">
+        Vue.component('my-component', {
+            template: '<span :me2="message">{{message}}</span>',
+            data: function () {
+                return {
+                    message: 'son'
+                }
+            }
+
+        })
+        var vm = new Vue({
+            el: '#dome13',
+            data: {
+                message: 'father'
+            }
+        })
+    </script>
+</body>
+</html>

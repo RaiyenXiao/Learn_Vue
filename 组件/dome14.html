@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome14">
+        <p>这里是初始内容标题</p>
+        <my-component>
+            <p>这里是子组件的初始内容</p>
+            <p>这里是子组件的初始内容</p>
+            <p>这里是子组件的初始内容</p>
+            <p>这里是子组件的初始内容</p>
+        </my-component>
+    </div>
+    <script type="text/javascript">
+        Vue.component('my-component', {
+            template: '<div>\
+                <h2>这是子组件的主题</h2>\
+                <slot>\
+                    这里的是没有分发的内容的时候才会显示\
+                </slot>\
+            </div>'
+        })
+        var vm = new Vue({
+            el: "#dome14"
+        })
+    </script>
+</body>
+</html>

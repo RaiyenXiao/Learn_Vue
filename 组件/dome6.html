@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome6">
+        <child message='component-props'></child>
+    </div>
+    <script type="text/javascript">
+        Vue.component('child', {
+            // 声明props
+            props: ['message'],
+            // 同样可以像实例vm一样,使用'this.message'
+            template: '<span>{{message}}</span>'
+        });
+        var vm = new Vue ({
+            el: '#dome6'
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <my-component id="dome12" v-on:click.native='doTheThing'></my-component>
+    <script type="text/javascript">
+        Vue.component('my-component', {
+            template: "<button>12</button>",
+
+        });
+        var vm = new Vue({
+            el: '#dome12',
+            methods: {
+                doTheThing: function (){
+                    console.log(1);
+                }
+            }
+        })
+    </script>
+</body>
+</html>

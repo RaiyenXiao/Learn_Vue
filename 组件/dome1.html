@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome1">
+        <my-component></my-component>
+    </div>
+    <script type="text/javascript">
+        // 注册
+        Vue.component('my-component', {
+            template: '<div>first component</div>'
+        });
+        // 创建根实例
+        var vm = new Vue ({
+            el: "#dome1"
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap"  v-on:mouseover='handleClick'>
+        <component v-bind:is='currentCom'></component>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: "#wrap",
+            data: {
+                currentCom: 'home'
+            },
+            components: {
+                home: {template:'<div>这里是home,移入的时候会变成post</div>'},
+                post: {template:'<em>这里是post</em>'}
+            },
+            methods: {
+                handleClick () {
+                    console.log(1);
+                    this.currentCom = 'post'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap"  v-on:mouseover='handleClick'>
+        <component v-bind:is='currentCom'></component>
+    </div>
+    <script type="text/javascript">
+        var home = {
+            template: '<p>这里是组件对象上的模板</p>'
+        }
+        var vm = new Vue({
+            el: "#wrap",
+            data: {
+                currentCom: home
+            },
+            components: {
+                post: {template:'<em>这里是post</em>'}
+            },
+            methods: {
+                handleClick () {
+                    console.log(1);
+                    this.currentCom = 'post'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <!-- <div id="dome9">
+        <child message = '1'></child>
+    </div>
+    <script type="text/javascript">
+        Vue.component('child',{
+            props: ['message'],
+            template: '<span>{{message}}</span>'
+        })
+        var vm = new Vue ({
+            el: '#dome9'
+        })
+    </script> -->
+    <div id="dome9">
+        <child :message = 'num'></child>
+    </div>
+    <script type="text/javascript">
+        Vue.component('child',{
+            props: ['message'],
+            template: '<span>{{message}}</span>'
+        })
+        var vm = new Vue ({
+            el: '#dome9',
+            data: {
+                num: 1
+            }
+        })
+    </script>
+</body>
+</html>

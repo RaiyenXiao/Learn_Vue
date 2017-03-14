@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="dome5">
+        <simple-component></simple-component>
+        <simple-component></simple-component>
+        <simple-component></simple-component>
+    </div>
+    <script type="text/javascript">
+        var data = {counter: 0}
+        Vue.component('simple-component', {
+           template: '<button v-on:click="counter += 1">{{counter}}</button>',
+	       /* data :{
+	            counter: 0
+	        }*/
+           /* data: function () {
+                return data;
+            }*/
+           data: function () {
+		    return {
+		        counter: 0
+		    }
+		}
+        });
+        var vm = new Vue ({
+            el: '#dome5'
+        })
+    </script>
+</body>
+</html>

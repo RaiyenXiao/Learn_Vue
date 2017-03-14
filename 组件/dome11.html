@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap-event">
+        <p>{{total}}</p>
+
+        <button-counter v-on:emit-increment="counterTotal"></button-counter>
+        <button-counter v-on:emit-increment="counterTotal"></button-counter>
+    </div>
+    <script type="text/javascript">
+    	
+        Vue.component('button-counter', {
+            template: '<button v-on:click="increment">{{counter}}</button>',
+            data: function () {
+                return {
+                    counter: 0
+                }
+            },
+            methods: {
+                increment: function (){
+                    this.counter++,
+                    this.$emit('emit-increment')
+                }
+            }
+        });
+        var vm = new Vue({
+            el: '#wrap-event',
+            data: {
+                total: 0
+            },
+            methods: {
+                counterTotal: function () {
+                    this.total += 1
+                }
+            }
+        })
+    </script>
+</body>
+</html>
